@@ -118,8 +118,87 @@ export const mockData = {
     { id: 17, name: 'Cartier Love Bracelet', brand: 'Cartier', category: 'accessories', style: 'luxury', price: '$6,800' },
     { id: 18, name: 'Chrome Hearts Chain', brand: 'Chrome Hearts', category: 'accessories', style: 'luxury', price: '$2,500' },
     { id: 19, name: 'Hermes Belt', brand: 'Hermes', category: 'accessories', style: 'luxury', price: '$800' },
-    { id: 20, name: 'Ray-Ban Aviators', brand: 'Ray-Ban', category: 'accessories', style: 'casual', price: '$150' }
+    { id: 20, name: 'Ray-Ban Aviators', brand: 'Ray-Ban', category: 'accessories', style: 'casual', price: '$150' },
+    
+    // Urban/Hip-Hop Accessories
+    { id: 21, name: 'Persol Steve McQueen Sunglasses', brand: 'Persol', category: 'accessories', style: 'urban_classic', price: '$350' },
+    { id: 22, name: 'Noah NYC Logo Tote', brand: 'Noah', category: 'accessories', style: 'streetwear_urban', price: '$180' },
+    { id: 23, name: 'Reigning Champ Gym Bag', brand: 'Reigning Champ', category: 'accessories', style: 'streetwear_sporty', price: '$120' },
+    { id: 24, name: 'Wacko Maria Lighter', brand: 'Wacko Maria', category: 'accessories', style: 'japanese_streetwear', price: '$85' },
+    { id: 25, name: 'OVO Cap', brand: 'October\'s Very Own', category: 'accessories', style: 'hip_hop_luxury', price: '$65' },
+    { id: 26, name: 'AllSaints Leather Belt', brand: 'AllSaints', category: 'accessories', style: 'urban_rebellious', price: '$150' },
+    { id: 27, name: 'Pop Trading Company Beanie', brand: 'Pop Trading Co', category: 'accessories', style: 'streetwear_skate', price: '$45' },
+    { id: 28, name: 'Sandy Liang Hair Clip', brand: 'Sandy Liang', category: 'accessories', style: 'streetwear_playful', price: '$35' },
+    { id: 29, name: 'Norse Projects Wool Scarf', brand: 'Norse Projects', category: 'accessories', style: 'streetwear_minimalist', price: '$120' },
+    { id: 30, name: 'Edwin Canvas Backpack', brand: 'Edwin', category: 'accessories', style: 'streetwear_classic', price: '$180' }
   ],
+
+  // New Rims/Wheels Category
+  rims: [
+    { id: 1, name: 'Coys C-67', brand: 'Coys', category: 'classic', style: 'hot_rod', aesthetic: 'Classic, Hot Rod' },
+    { id: 2, name: 'Budnik Gasser', brand: 'Budnik', category: 'classic', style: 'muscle', aesthetic: 'Classic, Muscle' },
+    { id: 3, name: 'Forgeline GA3R', brand: 'Forgeline', category: 'performance', style: 'modern', aesthetic: 'Performance, Modern' },
+    { id: 4, name: 'Velgen VF5', brand: 'Velgen', category: 'modern', style: 'urban', aesthetic: 'Modern, Urban' },
+    { id: 5, name: 'KMC KM544 Mesa', brand: 'KMC', category: 'rugged', style: 'off_road', aesthetic: 'Rugged, Off-Road' },
+    { id: 6, name: 'Borbet CW3', brand: 'Borbet', category: 'modern', style: 'european', aesthetic: 'Modern, European' },
+    { id: 7, name: 'SSR Executor CV01', brand: 'SSR', category: 'performance', style: 'jdm', aesthetic: 'Performance, JDM' },
+    { id: 8, name: 'HRE Vintage 501', brand: 'HRE', category: 'luxury', style: 'classic', aesthetic: 'Luxury, Classic' },
+    { id: 9, name: 'Fuel Off-Road D538 Maverick', brand: 'Fuel Off-Road', category: 'rugged', style: 'off_road', aesthetic: 'Rugged, Off-Road' },
+    { id: 10, name: 'Vossen CVT', brand: 'Vossen', category: 'luxury', style: 'modern', aesthetic: 'Luxury, Modern' }
+  ],
+
+  // Photography/Cinematography Settings
+  photography: {
+    cameras: [
+      { id: 1, name: 'Canon EOS R5 C', brand: 'Canon', category: 'cinema', style: 'professional' },
+      { id: 2, name: 'Sony Alpha 1', brand: 'Sony', category: 'mirrorless', style: 'versatile' },
+      { id: 3, name: 'Nikon Z9', brand: 'Nikon', category: 'mirrorless', style: 'pro_sports' },
+      { id: 4, name: 'Arri Mini LF', brand: 'Arri', category: 'cinema', style: 'hollywood' },
+      { id: 5, name: 'Red Komodo 6K', brand: 'Red', category: 'cinema', style: 'compact_cinema' }
+    ],
+    lenses: [
+      { id: 1, name: 'Canon EF 50mm f/1.2L', brand: 'Canon', type: 'prime', style: 'portrait' },
+      { id: 2, name: 'Sony G Master 24-70mm f/2.8', brand: 'Sony', type: 'zoom', style: 'versatile' },
+      { id: 3, name: 'Nikon Z 85mm f/1.8', brand: 'Nikon', type: 'prime', style: 'portrait' },
+      { id: 4, name: 'Fujinon Premista 28-100mm', brand: 'Fujinon', type: 'cinema_zoom', style: 'cinema' },
+      { id: 5, name: 'Tokina Cinema ATX 11-20mm', brand: 'Tokina', type: 'wide_angle', style: 'cinematic' }
+    ],
+    lighting: [
+      { id: 1, name: 'Nanlite Forza 500 Key Light', brand: 'Nanlite', type: 'key', style: 'powerful' },
+      { id: 2, name: 'Quasar Science Crossfade Tubes', brand: 'Quasar Science', type: 'rgb', style: 'creative' },
+      { id: 3, name: 'Practical LED Strips', brand: 'Generic', type: 'practical', style: 'ambient' },
+      { id: 4, name: 'GVM 800D-RGB Panel', brand: 'GVM', type: 'fill', style: 'rgb_panel' },
+      { id: 5, name: 'Litepanels Astra 6X Soft Light', brand: 'Litepanels', type: 'soft', style: 'interview' }
+    ],
+    timeOfDay: [
+      { id: 1, name: 'Early Morning Mist', style: 'cool_diffused', mood: 'serene' },
+      { id: 2, name: 'Sunset with Lens Flare', style: 'warm_dramatic', mood: 'cinematic' },
+      { id: 3, name: 'Late Night Neon Glow', style: 'vibrant_contrast', mood: 'urban' },
+      { id: 4, name: 'Afternoon Urban Haze', style: 'soft_gritty', mood: 'authentic' },
+      { id: 5, name: 'Twilight with Streetlights', style: 'moody_cinematic', mood: 'dramatic' }
+    ],
+    angles: [
+      { id: 1, name: 'Jib Shot Wide', type: 'wide', style: 'cinematic' },
+      { id: 2, name: 'Steadicam Follow Shot', type: 'tracking', style: 'dynamic' },
+      { id: 3, name: 'Tilt-Shift Close-Up', type: 'close_up', style: 'artistic' },
+      { id: 4, name: 'Overhead Drone Shot', type: 'aerial', style: 'epic' },
+      { id: 5, name: 'Side-Profile Medium Shot', type: 'medium', style: 'portrait' }
+    ],
+    colorGrading: [
+      { id: 1, name: 'Urban Night Blue Tint', style: 'cool_blue', mood: 'urban' },
+      { id: 2, name: 'Warm Cinematic Sunset Glow', style: 'warm_orange', mood: 'cinematic' },
+      { id: 3, name: 'High-Contrast Black & White', style: 'monochrome', mood: 'dramatic' },
+      { id: 4, name: 'Neon Pop with Vibrant Highlights', style: 'vibrant', mood: 'electric' },
+      { id: 5, name: 'Grainy Retro Film Look', style: 'vintage', mood: 'nostalgic' }
+    ],
+    techniques: [
+      { id: 1, name: 'Lens Whacking', effect: 'dreamy_edges', style: 'artistic' },
+      { id: 2, name: 'Light Leaks', effect: 'retro_vibe', style: 'vintage' },
+      { id: 3, name: 'Motion Blur', effect: 'dynamic_feel', style: 'energetic' },
+      { id: 4, name: 'Chromatic Aberration', effect: 'edgy_look', style: 'modern' },
+      { id: 5, name: 'Infrared Filter', effect: 'surreal_tones', style: 'otherworldly' }
+    ]
+  },
   
   locations: [
     // Urban Environments
