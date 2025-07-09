@@ -24,14 +24,18 @@ const DripVisualizer = () => {
       hairStyle: ''
     },
     vehicle: null,
+    rims: null,
     clothing: [],
     location: null,
     pose: null,
     fx: [],
-    camera: 'canon_eos_r5',
+    camera: 'canon_eos_r5_c',
     lens: '50mm',
     angle: 'centered',
     lighting: 'key_light',
+    timeOfDay: 'sunset_lens_flare',
+    colorGrading: 'warm_cinematic_sunset',
+    techniques: [],
     mood: 'confident',
     ratio: '9:16'
   });
