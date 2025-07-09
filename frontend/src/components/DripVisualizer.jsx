@@ -43,7 +43,7 @@ const DripVisualizer = () => {
   const [generatedPrompt, setGeneratedPrompt] = useState('');
 
   const generatePrompt = () => {
-    const { character, vehicle, clothing, location, pose, fx, camera, lens, angle, lighting, mood, ratio } = selectedOptions;
+    const { character, vehicle, rims, clothing, location, pose, fx, camera, lens, angle, lighting, timeOfDay, colorGrading, techniques, mood, ratio } = selectedOptions;
     
     if (!character.sex || !character.skinTone || !character.hairStyle) {
       toast({
@@ -70,12 +70,27 @@ const DripVisualizer = () => {
     
     if (vehicle) {
       prompt += ` with ${vehicle.name}`;
+      if (rims) {
+        prompt += ` on ${rims.name} wheels`;
+      }
     }
     
     prompt += `. Shot on ${camera} with ${lens} lens from ${angle} angle using ${lighting}`;
     
+    if (timeOfDay) {
+      prompt += ` during ${timeOfDay}`;
+    }
+    
+    if (colorGrading) {
+      prompt += ` with ${colorGrading} color grading`;
+    }
+    
     if (fx.length > 0) {
       prompt += `. FX: ${fx.join(', ')}`;
+    }
+    
+    if (techniques.length > 0) {
+      prompt += `. Techniques: ${techniques.join(', ')}`;
     }
     
     prompt += `. Mood: ${mood}. Image ratio: ${ratio}.`;
