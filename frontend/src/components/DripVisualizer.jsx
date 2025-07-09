@@ -8,10 +8,12 @@ import { Copy, Shuffle, Download, Save } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import CharacterBuilder from './CharacterBuilder';
 import VehicleSelector from './VehicleSelector';
+import RimsSelector from './RimsSelector';
 import ClothingSelector from './ClothingSelector';
 import LocationSelector from './LocationSelector';
 import PoseSelector from './PoseSelector';
 import FXSelector from './FXSelector';
+import CameraSelector from './CameraSelector';
 import PromptDisplay from './PromptDisplay';
 import { mockData } from '../data/mockData';
 
