@@ -31,13 +31,10 @@ const DripVisualizer = () => {
     location: null,
     pose: null,
     fx: [],
-    camera: 'canon_eos_r5_c',
+    camera: 'canon_eos_r5',
     lens: '50mm',
     angle: 'centered',
     lighting: 'key_light',
-    timeOfDay: 'sunset_lens_flare',
-    colorGrading: 'warm_cinematic_sunset',
-    techniques: [],
     mood: 'confident',
     ratio: '9:16'
   });
