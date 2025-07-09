@@ -162,13 +162,15 @@ const DripVisualizer = () => {
               </CardHeader>
               <CardContent>
                 <Tabs defaultValue="character" className="w-full">
-                  <TabsList className="grid w-full grid-cols-6 bg-gray-800/50 mb-6">
-                    <TabsTrigger value="character" className="data-[state=active]:bg-purple-600">Character</TabsTrigger>
-                    <TabsTrigger value="clothing" className="data-[state=active]:bg-purple-600">Clothing</TabsTrigger>
-                    <TabsTrigger value="vehicles" className="data-[state=active]:bg-purple-600">Vehicles</TabsTrigger>
-                    <TabsTrigger value="locations" className="data-[state=active]:bg-purple-600">Locations</TabsTrigger>
-                    <TabsTrigger value="poses" className="data-[state=active]:bg-purple-600">Poses</TabsTrigger>
-                    <TabsTrigger value="fx" className="data-[state=active]:bg-purple-600">FX</TabsTrigger>
+                  <TabsList className="grid w-full grid-cols-8 bg-gray-800/50 mb-6">
+                    <TabsTrigger value="character" className="data-[state=active]:bg-purple-600 text-xs">Character</TabsTrigger>
+                    <TabsTrigger value="clothing" className="data-[state=active]:bg-purple-600 text-xs">Clothing</TabsTrigger>
+                    <TabsTrigger value="vehicles" className="data-[state=active]:bg-purple-600 text-xs">Vehicles</TabsTrigger>
+                    <TabsTrigger value="rims" className="data-[state=active]:bg-purple-600 text-xs">Rims</TabsTrigger>
+                    <TabsTrigger value="locations" className="data-[state=active]:bg-purple-600 text-xs">Locations</TabsTrigger>
+                    <TabsTrigger value="poses" className="data-[state=active]:bg-purple-600 text-xs">Poses</TabsTrigger>
+                    <TabsTrigger value="fx" className="data-[state=active]:bg-purple-600 text-xs">FX</TabsTrigger>
+                    <TabsTrigger value="camera" className="data-[state=active]:bg-purple-600 text-xs">Camera</TabsTrigger>
                   </TabsList>
                   
                   <TabsContent value="character">
