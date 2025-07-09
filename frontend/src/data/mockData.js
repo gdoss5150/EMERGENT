@@ -14,26 +14,81 @@ export const mockData = {
   },
   
   vehicles: [
-    // Luxury Cars
-    { id: 1, name: 'Lamborghini Urus', brand: 'Lamborghini', category: 'luxury', year: '2025' },
-    { id: 2, name: 'Tesla Model X', brand: 'Tesla', category: 'luxury', year: '2025' },
-    { id: 3, name: 'Rolls Royce Cullinan', brand: 'Rolls Royce', category: 'luxury', year: '2025' },
-    { id: 4, name: 'Bentley Bentayga', brand: 'Bentley', category: 'luxury', year: '2025' },
-    { id: 5, name: 'G-Wagon AMG', brand: 'Mercedes', category: 'luxury', year: '2025' },
+    // Vintage American Muscle Cars (1960-1974)
+    { id: 1, name: 'AMC AMX', brand: 'AMC', category: 'vintage_muscle', year: '1968-1974', description: 'Two-seat configuration, performance V8s' },
+    { id: 2, name: 'Buick Wildcat', brand: 'Buick', category: 'vintage_muscle', year: '1962-1970', description: 'Full-size muscle, distinctive styling' },
+    { id: 3, name: 'Chevrolet Camaro SS', brand: 'Chevrolet', category: 'vintage_muscle', year: '1967-1974', description: 'Pony car, Super Sport performance package' },
+    { id: 4, name: 'Chevrolet Camaro Z/28', brand: 'Chevrolet', category: 'vintage_muscle', year: '1967-1974', description: 'Trans-Am racing homologation special' },
+    { id: 5, name: 'Chevrolet Chevelle SS 454', brand: 'Chevrolet', category: 'vintage_muscle', year: '1970', description: 'Legendary big-block muscle, LS6 engine' },
+    { id: 6, name: 'Dodge Charger R/T', brand: 'Dodge', category: 'vintage_muscle', year: '1966-1974', description: 'Iconic fastback design, R/T performance' },
+    { id: 7, name: 'Dodge Challenger R/T', brand: 'Dodge', category: 'vintage_muscle', year: '1970-1974', description: 'Pony car, R/T and T/A models, Hemi option' },
+    { id: 8, name: 'Dodge Charger Daytona', brand: 'Dodge', category: 'vintage_muscle', year: '1969', description: 'Aerodynamic warrior, wing car for NASCAR' },
+    { id: 9, name: 'Plymouth Barracuda', brand: 'Plymouth', category: 'vintage_muscle', year: '1964-1974', description: 'A-body and E-body, Cuda performance models' },
+    { id: 10, name: 'Plymouth Road Runner', brand: 'Plymouth', category: 'vintage_muscle', year: '1968-1974', description: 'Budget muscle, beep beep horn, Air Grabber hood' },
+    { id: 11, name: 'Plymouth Superbird', brand: 'Plymouth', category: 'vintage_muscle', year: '1970', description: 'Aerodynamic wing car, Charger Daytona sibling' },
+    { id: 12, name: 'Pontiac GTO', brand: 'Pontiac', category: 'vintage_muscle', year: '1964-1974', description: 'Started the muscle car trend' },
+    { id: 13, name: 'Ford Mustang Boss 302', brand: 'Ford', category: 'vintage_muscle', year: '1970', description: 'Trans-Am inspired, high-performance small-block' },
+    { id: 14, name: 'Shelby Mustang GT350', brand: 'Shelby', category: 'vintage_muscle', year: '1965-1970', description: 'Carroll Shelby-tuned performance Mustang' },
+    { id: 15, name: 'Shelby Mustang GT500', brand: 'Shelby', category: 'vintage_muscle', year: '1965-1970', description: 'Big-block Shelby, GT500-KR King of the Road' },
     
-    // Classic Cars
-    { id: 6, name: 'Chevrolet Chevette', brand: 'Chevrolet', category: 'classic', year: '1985' },
-    { id: 7, name: 'Buick Regal GN', brand: 'Buick', category: 'classic', year: '1987' },
-    { id: 8, name: 'Monte Carlo SS', brand: 'Chevrolet', category: 'classic', year: '1988' },
-    { id: 9, name: 'Cadillac Fleetwood', brand: 'Cadillac', category: 'classic', year: '1990' },
-    { id: 10, name: 'Oldsmobile Cutlass', brand: 'Oldsmobile', category: 'classic', year: '1985' },
+    // Chevrolet SS Legacy
+    { id: 16, name: 'Chevrolet Impala SS', brand: 'Chevrolet', category: 'ss_legacy', year: '1961-1969', description: 'Early full-size performance, 348/409/427 V8' },
+    { id: 17, name: 'Chevrolet Nova SS', brand: 'Chevrolet', category: 'ss_legacy', year: '1963-1976', description: 'Compact muscle, various V8 options' },
+    { id: 18, name: 'Chevrolet El Camino SS', brand: 'Chevrolet', category: 'ss_legacy', year: '1968-1987', description: 'Truck utility with muscle car power' },
+    { id: 19, name: 'Chevrolet Monte Carlo SS', brand: 'Chevrolet', category: 'ss_legacy', year: '1983-1988', description: 'NASCAR-inspired aerodynamics' },
+    { id: 20, name: 'Chevrolet Silverado 454 SS', brand: 'Chevrolet', category: 'ss_legacy', year: '1990-1993', description: 'Big-block sport truck, King of the Streets' },
+    { id: 21, name: 'Chevrolet SSR', brand: 'Chevrolet', category: 'ss_legacy', year: '2003-2006', description: 'Retro-styled convertible pickup truck' },
+    { id: 22, name: 'Chevrolet TrailBlazer SS', brand: 'Chevrolet', category: 'ss_legacy', year: '2006-2009', description: 'Corvette-derived LS2 V8, first SS SUV' },
+    { id: 23, name: 'Chevrolet Cobalt SS', brand: 'Chevrolet', category: 'ss_legacy', year: '2005-2010', description: 'Sport compact, supercharged/turbocharged' },
+    { id: 24, name: 'Chevrolet Blazer EV SS', brand: 'Chevrolet', category: 'ss_legacy', year: '2025', description: 'First all-electric SS model' },
     
-    // SUVs & Trucks
-    { id: 11, name: 'Dodge Charger Hellcat', brand: 'Dodge', category: 'suv', year: '2025' },
-    { id: 12, name: 'Camaro ZL1', brand: 'Chevrolet', category: 'suv', year: '2025' },
-    { id: 13, name: 'Range Rover SVR', brand: 'Range Rover', category: 'suv', year: '2025' },
-    { id: 14, name: 'Maserati Levante', brand: 'Maserati', category: 'suv', year: '2025' },
-    { id: 15, name: 'Escalade ESV', brand: 'Cadillac', category: 'suv', year: '2025' }
+    // Ford Mustang Cobra & Shelby Variants
+    { id: 25, name: 'Ford Mustang SVT Cobra', brand: 'Ford', category: 'cobra_legacy', year: '1993', description: 'Fox-Body, upgraded 5.0L V8, unique styling' },
+    { id: 26, name: 'Ford Mustang Cobra R', brand: 'Ford', category: 'cobra_legacy', year: '1995', description: 'Track-focused, 5.8L V8, stripped for weight' },
+    { id: 27, name: 'Ford Mustang Mystic Cobra', brand: 'Ford', category: 'cobra_legacy', year: '1996', description: 'Color-shifting paint, DOHC 4.6L V8' },
+    { id: 28, name: 'Ford Mustang SVT Cobra', brand: 'Ford', category: 'cobra_legacy', year: '1999-2001', description: 'Independent rear suspension, New Edge styling' },
+    { id: 29, name: 'Ford Mustang Cobra R', brand: 'Ford', category: 'cobra_legacy', year: '2000', description: '5.4L DOHC V8, aggressive aero, track-ready' },
+    { id: 30, name: 'Ford Mustang Terminator Cobra', brand: 'Ford', category: 'cobra_legacy', year: '2003-2004', description: 'Supercharged 4.6L DOHC V8, most formidable' },
+    { id: 31, name: 'Ford Mustang Mystichrome Cobra', brand: 'Ford', category: 'cobra_legacy', year: '2004', description: 'Color-shifting paint, interior accents' },
+    
+    // Pontiac Trans Am Legacy
+    { id: 32, name: 'Pontiac Trans Am', brand: 'Pontiac', category: 'trans_am', year: '1969', description: 'Debut model, rear spoiler, functional hood scoops' },
+    { id: 33, name: 'Pontiac Trans Am Bandit', brand: 'Pontiac', category: 'trans_am', year: '1976-1978', description: 'Black and gold, Y82/Y88 Special Edition' },
+    { id: 34, name: 'Pontiac Trans Am 10th Anniversary', brand: 'Pontiac', category: 'trans_am', year: '1979', description: 'Silver with specific hood bird design' },
+    { id: 35, name: 'Pontiac Trans Am Turbo', brand: 'Pontiac', category: 'trans_am', year: '1980-1981', description: 'Turbocharged 301 V8, distinctive hood bulge' },
+    { id: 36, name: 'Pontiac Trans Am GTA', brand: 'Pontiac', category: 'trans_am', year: '1987-1992', description: 'Gran Turismo Americano, upgraded suspension' },
+    { id: 37, name: 'Pontiac Trans Am 20th Anniversary', brand: 'Pontiac', category: 'trans_am', year: '1989', description: 'Turbo V6, Indianapolis 500 Pace Car' },
+    
+    // Modern Luxury Sports Cars
+    { id: 38, name: 'Lamborghini Urus', brand: 'Lamborghini', category: 'luxury_sports', year: '2025', description: 'Luxury SUV with supercar DNA' },
+    { id: 39, name: 'Ferrari F355', brand: 'Ferrari', category: 'luxury_sports', year: '1994-1999', description: 'Mid-engine V8, improved usability' },
+    { id: 40, name: 'Porsche 911', brand: 'Porsche', category: 'luxury_sports', year: '2025', description: 'Iconic sports car, hybrid powertrain options' },
+    { id: 41, name: 'Aston Martin Vantage', brand: 'Aston Martin', category: 'luxury_sports', year: '2025', description: 'Twin-turbo V8, refined British GT' },
+    { id: 42, name: 'McLaren Artura', brand: 'McLaren', category: 'luxury_sports', year: '2025', description: 'Hybrid supercar technology' },
+    { id: 43, name: 'Chevrolet Corvette C8', brand: 'Chevrolet', category: 'luxury_sports', year: '2025', description: 'Mid-engine American sports car' },
+    { id: 44, name: 'Audi RS e-tron GT', brand: 'Audi', category: 'luxury_sports', year: '2025', description: 'All-electric, 912 hp, 0-60 in 2.4s' },
+    { id: 45, name: 'Mercedes-AMG SL', brand: 'Mercedes-Benz', category: 'luxury_sports', year: '2025', description: 'Luxury sports car, plush and punchy' },
+    
+    // Classic Luxury & GT Cars
+    { id: 46, name: 'Jaguar XJ12L', brand: 'Jaguar', category: 'classic_luxury', year: '1974-1979', description: 'Wood-and-leather interior, V12 power' },
+    { id: 47, name: 'Maserati Sebring', brand: 'Maserati', category: 'classic_luxury', year: '1967', description: 'Classic Italian GT, elegant styling' },
+    { id: 48, name: 'Alfa Romeo 2600 Spider', brand: 'Alfa Romeo', category: 'classic_luxury', year: '1962-1966', description: 'Touring-bodied, DOHC inline-six' },
+    { id: 49, name: 'AC Cobra', brand: 'AC Cars', category: 'classic_luxury', year: '1961-1969', description: 'British chassis, American V8 power' },
+    { id: 50, name: 'Jensen Interceptor Mk III', brand: 'Jensen', category: 'classic_luxury', year: '1971-1976', description: 'British GT, Chrysler V8, distinctive hatch' },
+    
+    // Modern SUVs & Trucks
+    { id: 51, name: 'G-Wagon AMG', brand: 'Mercedes', category: 'luxury_suv', year: '2025', description: 'Iconic luxury SUV with AMG performance' },
+    { id: 52, name: 'Bentley Bentayga', brand: 'Bentley', category: 'luxury_suv', year: '2025', description: 'Ultra-luxury SUV craftsmanship' },
+    { id: 53, name: 'Rolls Royce Cullinan', brand: 'Rolls Royce', category: 'luxury_suv', year: '2025', description: 'Pinnacle of luxury SUV segment' },
+    { id: 54, name: 'Range Rover SVR', brand: 'Range Rover', category: 'luxury_suv', year: '2025', description: 'Performance-focused luxury SUV' },
+    { id: 55, name: 'Escalade ESV', brand: 'Cadillac', category: 'luxury_suv', year: '2025', description: 'American luxury SUV with presence' },
+    
+    // Modern Performance Cars
+    { id: 56, name: 'Dodge Charger Hellcat', brand: 'Dodge', category: 'modern_muscle', year: '2025', description: 'Supercharged modern muscle sedan' },
+    { id: 57, name: 'Camaro ZL1', brand: 'Chevrolet', category: 'modern_muscle', year: '2025', description: 'Track-focused modern muscle car' },
+    { id: 58, name: 'Ford Mustang Shelby GT500', brand: 'Ford', category: 'modern_muscle', year: '2025', description: 'Supercharged modern Shelby performance' },
+    { id: 59, name: 'Challenger SRT Hellcat', brand: 'Dodge', category: 'modern_muscle', year: '2025', description: 'Widebody modern muscle coupe' },
+    { id: 60, name: 'Tesla Model S Plaid', brand: 'Tesla', category: 'modern_muscle', year: '2025', description: 'Electric performance sedan' }
   ],
   
   clothing: [
