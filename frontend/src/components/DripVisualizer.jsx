@@ -45,7 +45,7 @@ const DripVisualizer = () => {
   const [generatedPrompt, setGeneratedPrompt] = useState('');
 
   const generatePrompt = () => {
-    const { character, vehicle, rims, clothing, location, pose, fx, camera, lens, angle, lighting, timeOfDay, colorGrading, techniques, mood, ratio } = selectedOptions;
+    const { character, vehicle, rims, clothing, location, pose, fx, camera, lens, angle, lighting, mood, ratio } = selectedOptions;
     
     if (!character.sex || !character.skinTone || !character.hairStyle) {
       toast({
@@ -56,11 +56,12 @@ const DripVisualizer = () => {
       return;
     }
 
+    // Following Metarealismzolo Format:
+    // [subject] in [pose], located in [scene], wearing [fit] with [hair style], on [vehicle if any].  
+    // Shot on [camera] using [lens] from a [angle] with [lighting]. FX: [fx list].  
+    // Mood: [tone]. Image ratio: 9:16 or 16:9
+
     let prompt = `A ${character.skinTone} ${character.sex} with ${character.hairStyle}`;
-    
-    if (clothing.length > 0) {
-      prompt += ` wearing ${clothing.join(', ')}`;
-    }
     
     if (pose) {
       prompt += ` in ${pose.name}`;
@@ -70,32 +71,24 @@ const DripVisualizer = () => {
       prompt += `, located in ${location.name}`;
     }
     
+    if (clothing.length > 0) {
+      prompt += `, wearing ${clothing.join(', ')}`;
+    }
+    
     if (vehicle) {
-      prompt += ` with ${vehicle.name}`;
+      prompt += `, on ${vehicle.name}`;
       if (rims) {
-        prompt += ` on ${rims.name} wheels`;
+        prompt += ` with ${rims.name} wheels`;
       }
     }
     
-    prompt += `. Shot on ${camera} with ${lens} lens from ${angle} angle using ${lighting}`;
-    
-    if (timeOfDay) {
-      prompt += ` during ${timeOfDay}`;
-    }
-    
-    if (colorGrading) {
-      prompt += ` with ${colorGrading} color grading`;
-    }
+    prompt += `. Shot on ${camera} using ${lens} from a ${angle} with ${lighting}`;
     
     if (fx.length > 0) {
       prompt += `. FX: ${fx.join(', ')}`;
     }
     
-    if (techniques.length > 0) {
-      prompt += `. Techniques: ${techniques.join(', ')}`;
-    }
-    
-    prompt += `. Mood: ${mood}. Image ratio: ${ratio}.`;
+    prompt += `. Mood: ${mood}. Image ratio: ${ratio}`;
     
     setGeneratedPrompt(prompt);
   };
