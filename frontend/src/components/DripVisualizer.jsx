@@ -243,6 +243,20 @@ const DripVisualizer = () => {
                       setSelectedOptions={setSelectedOptions}
                     />
                   </TabsContent>
+                  
+                  <TabsContent value="rims">
+                    <RimsSelector 
+                      selectedOptions={selectedOptions} 
+                      setSelectedOptions={setSelectedOptions}
+                    />
+                  </TabsContent>
+                  
+                  <TabsContent value="camera">
+                    <CameraSelector 
+                      selectedOptions={selectedOptions} 
+                      setSelectedOptions={setSelectedOptions}
+                    />
+                  </TabsContent>
                 </Tabs>
               </CardContent>
             </Card>
