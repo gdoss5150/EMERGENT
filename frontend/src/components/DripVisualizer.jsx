@@ -119,10 +119,11 @@ const DripVisualizer = () => {
     const randomLocation = mockData.locations[Math.floor(Math.random() * mockData.locations.length)];
     const randomPose = mockData.poses[Math.floor(Math.random() * mockData.poses.length)];
     const randomFX = mockData.fx.slice(0, Math.floor(Math.random() * 2) + 1);
-    const randomCamera = mockData.photography.cameras[Math.floor(Math.random() * mockData.photography.cameras.length)];
-    const randomTimeOfDay = mockData.photography.timeOfDay[Math.floor(Math.random() * mockData.photography.timeOfDay.length)];
-    const randomColorGrading = mockData.photography.colorGrading[Math.floor(Math.random() * mockData.photography.colorGrading.length)];
-    const randomTechniques = mockData.photography.techniques.slice(0, Math.floor(Math.random() * 2) + 1);
+    const randomCamera = ['canon_eos_r5', 'sony_fx6', 'red_komodo_6k', 'leica_sl2', 'iphone_14_pro'][Math.floor(Math.random() * 5)];
+    const randomLens = ['24mm', '35mm', '50mm', '85mm'][Math.floor(Math.random() * 4)];
+    const randomAngle = ['low_angle', 'high_angle', 'dutch_tilt', 'centered', 'worm_eye', 'over_the_shoulder'][Math.floor(Math.random() * 6)];
+    const randomLighting = ['key_light', 'rim_light', 'neon_backlight', 'ambient_haze', 'spotlight_edge', 'fill_light_soft'][Math.floor(Math.random() * 6)];
+    const randomRatio = ['9:16', '16:9'][Math.floor(Math.random() * 2)];
     
     setSelectedOptions({
       ...selectedOptions,
@@ -133,10 +134,11 @@ const DripVisualizer = () => {
       location: randomLocation,
       pose: randomPose,
       fx: randomFX.map(item => item.name),
-      camera: randomCamera.name,
-      timeOfDay: randomTimeOfDay.name,
-      colorGrading: randomColorGrading.name,
-      techniques: randomTechniques.map(item => item.name)
+      camera: randomCamera,
+      lens: randomLens,
+      angle: randomAngle,
+      lighting: randomLighting,
+      ratio: randomRatio
     });
   };
 
