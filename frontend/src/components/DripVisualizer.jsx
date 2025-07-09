@@ -122,19 +122,29 @@ const DripVisualizer = () => {
     };
     
     const randomVehicle = mockData.vehicles[Math.floor(Math.random() * mockData.vehicles.length)];
+    const randomRims = mockData.rims[Math.floor(Math.random() * mockData.rims.length)];
     const randomClothing = mockData.clothing.slice(0, Math.floor(Math.random() * 3) + 1);
     const randomLocation = mockData.locations[Math.floor(Math.random() * mockData.locations.length)];
     const randomPose = mockData.poses[Math.floor(Math.random() * mockData.poses.length)];
     const randomFX = mockData.fx.slice(0, Math.floor(Math.random() * 2) + 1);
+    const randomCamera = mockData.photography.cameras[Math.floor(Math.random() * mockData.photography.cameras.length)];
+    const randomTimeOfDay = mockData.photography.timeOfDay[Math.floor(Math.random() * mockData.photography.timeOfDay.length)];
+    const randomColorGrading = mockData.photography.colorGrading[Math.floor(Math.random() * mockData.photography.colorGrading.length)];
+    const randomTechniques = mockData.photography.techniques.slice(0, Math.floor(Math.random() * 2) + 1);
     
     setSelectedOptions({
       ...selectedOptions,
       character: randomCharacter,
       vehicle: randomVehicle,
+      rims: randomRims,
       clothing: randomClothing.map(item => item.name),
       location: randomLocation,
       pose: randomPose,
-      fx: randomFX.map(item => item.name)
+      fx: randomFX.map(item => item.name),
+      camera: randomCamera.name,
+      timeOfDay: randomTimeOfDay.name,
+      colorGrading: randomColorGrading.name,
+      techniques: randomTechniques.map(item => item.name)
     });
   };
 
