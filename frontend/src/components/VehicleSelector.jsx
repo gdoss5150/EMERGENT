@@ -13,9 +13,14 @@ const VehicleSelector = ({ selectedOptions, setSelectedOptions }) => {
   };
 
   const categories = {
-    'Luxury Cars': mockData.vehicles.filter(v => v.category === 'luxury'),
-    'Classic Cars': mockData.vehicles.filter(v => v.category === 'classic'),
-    'SUVs & Trucks': mockData.vehicles.filter(v => v.category === 'suv')
+    'Vintage American Muscle (1960-1974)': mockData.vehicles.filter(v => v.category === 'vintage_muscle'),
+    'Chevrolet SS Legacy': mockData.vehicles.filter(v => v.category === 'ss_legacy'),
+    'Ford Mustang Cobra & Shelby': mockData.vehicles.filter(v => v.category === 'cobra_legacy'),
+    'Pontiac Trans Am': mockData.vehicles.filter(v => v.category === 'trans_am'),
+    'Modern Luxury Sports Cars': mockData.vehicles.filter(v => v.category === 'luxury_sports'),
+    'Classic Luxury & GT Cars': mockData.vehicles.filter(v => v.category === 'classic_luxury'),
+    'Luxury SUVs': mockData.vehicles.filter(v => v.category === 'luxury_suv'),
+    'Modern Performance Cars': mockData.vehicles.filter(v => v.category === 'modern_muscle')
   };
 
   const renderVehicleGrid = (vehicles) => {
@@ -35,9 +40,13 @@ const VehicleSelector = ({ selectedOptions, setSelectedOptions }) => {
             <div className="flex flex-col items-start w-full">
               <span className="text-lg font-bold mb-1">{vehicle.name}</span>
               <span className="text-sm text-gray-400 mb-2">{vehicle.brand}</span>
+              <span className="text-xs text-gray-500 mb-2">{vehicle.year}</span>
+              {vehicle.description && (
+                <span className="text-xs text-gray-400 mb-2 line-clamp-2">{vehicle.description}</span>
+              )}
               <div className="flex flex-wrap gap-1">
                 <Badge variant="outline" className="text-xs">
-                  {vehicle.category}
+                  {vehicle.category.replace('_', ' ')}
                 </Badge>
                 <Badge variant="outline" className="text-xs">
                   {vehicle.year}
@@ -59,6 +68,13 @@ const VehicleSelector = ({ selectedOptions, setSelectedOptions }) => {
             {selectedOptions.vehicle.name}
           </Badge>
         )}
+      </div>
+
+      <div className="bg-orange-900/20 border border-orange-500/30 rounded-lg p-4 mb-4">
+        <p className="text-orange-300 text-sm">
+          🔥 <strong>Authentic Catalog:</strong> Comprehensive collection from 1960-2025 including legendary muscle cars, 
+          exotic supercars, and cultural icons. Each vehicle selected for maximum visual impact.
+        </p>
       </div>
 
       {Object.entries(categories).map(([categoryName, vehicles]) => (
